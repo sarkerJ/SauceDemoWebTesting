@@ -23,6 +23,8 @@ namespace SauceDemoWebTestingSolution
 
 		private IWebElement _productPageName => _seleniumDriver.FindElement(By.ClassName("inventory_details_name"));
 		private IWebElement _productPageBackButton => _seleniumDriver.FindElement(By.ClassName("inventory_details_back_button"));
+		private IWebElement _burgerMenuButton => _seleniumDriver.FindElement(By.ClassName("bm-burger-button"));
+		private IWebElement _logoutButton => _seleniumDriver.FindElement(By.Id("logout_sidebar_link"));
 
 
 		public SD_Products_Page(IWebDriver seleniumDriver)
@@ -84,5 +86,14 @@ namespace SauceDemoWebTestingSolution
 			_productPageBackButton.Click();
         }
 
+		public void ClickBurgerMenuButton()
+		{
+			_burgerMenuButton.Click();
+		}
+
+		public void ClickLogoutButton()
+		{
+			_logoutButton.Click();
+		}
 	}
 }
