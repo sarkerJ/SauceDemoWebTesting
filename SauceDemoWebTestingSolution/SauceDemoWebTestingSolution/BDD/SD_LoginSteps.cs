@@ -2,6 +2,7 @@
 using TechTalk.SpecFlow;
 using System.Threading;
 using TechTalk.SpecFlow.Assist;
+using OpenQA.Selenium;
 
 namespace SauceDemoWebTestingSolution.BDD
 {
@@ -28,6 +29,14 @@ namespace SauceDemoWebTestingSolution.BDD
         public void GivenIHaveSuppliedTheFollowingInvalidCredentials(Table table)
         {
             _loginCredentials = table.CreateInstance<LoginCredentials>();
+            SD_Website.SD_Login_Page.EnterCredentials(_loginCredentials);
+        }
+
+        [Given(@"I have supplied the following (.*) and (.*)")]
+        public void GivenIHaveSuppliedTheFollowingAnd(string username, string password)
+        {
+            _loginCredentials = new LoginCredentials() { Username = username, Password = password };
+            SD_Website.SD_Login_Page.EnterCredentials(_loginCredentials);
         }
 
         [When(@"I click the login button")]
@@ -40,14 +49,26 @@ namespace SauceDemoWebTestingSolution.BDD
         public void ThenIShouldLandOnTheProductsPage()
         {
             Thread.Sleep(5000);
-            Assert.That(SD_Website.SD_Login_Page.GetPageTitle(), Does.Contain("Swag Labs"));
+            Assert.That(SD_Website.SD_Products_Page.GetPageLabel(), Does.Contain("Products"));
         }
 
-        [Then(@"I get the following error message ""(.*)""")]
+        //[Then(@"I get the following error message ""(.*)""")]
+        //public void ThenIGetTheFollowingErrorMessage(string error)
+        //{
+        //    Assert.That(SD_Website.SD_Login_Page.GetErrorMessageText(),Does.Contain(error));
+        //}
+
+
+
+        [Then(@"I get the following error message (.*)")]
         public void ThenIGetTheFollowingErrorMessage(string error)
         {
-            Assert.That(SD_Website.SD_Login_Page.ErrorMessage(), Does.Contain(error));
+            Assert.That(SD_Website.SD_Login_Page.GetErrorMessageText(), Does.Contain(error));
         }
+
+        
+
+
 
         [AfterScenario]
         public void DisposableWebDriver()

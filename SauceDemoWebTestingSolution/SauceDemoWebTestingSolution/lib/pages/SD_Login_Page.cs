@@ -10,7 +10,7 @@ namespace SauceDemoWebTestingSolution
 		private IWebElement _loginButton => _seleniumDriver.FindElement(By.Id("login-button"));
 		private IWebElement _usernameField => _seleniumDriver.FindElement(By.Id("user-name"));
 		private IWebElement _passwordField => _seleniumDriver.FindElement(By.Id("password"));
-		private IWebElement _errorMessage => _seleniumDriver.FindElement(By.Id(""));
+		private IWebElement _errorMessage => _seleniumDriver.FindElement(By.CssSelector("*[data-test=\"error\"]"));
 
 		public SD_Login_Page(IWebDriver seleniumDriver)
 		{
@@ -33,7 +33,7 @@ namespace SauceDemoWebTestingSolution
 			_loginButton.Click();
 		}
 
-		public string ErrorMessage()
+		public string GetErrorMessageText()
 		{
 			return _errorMessage.Text;
 		}

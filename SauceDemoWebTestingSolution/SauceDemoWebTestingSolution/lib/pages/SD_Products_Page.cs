@@ -5,15 +5,17 @@ namespace SauceDemoWebTestingSolution
 	public class SD_Products_Page
 	{
 		private IWebDriver _seleniumDriver;
+		private IWebElement _productLabel => _seleniumDriver.FindElement(By.ClassName("product_label"));
+
 
 		public SD_Products_Page(IWebDriver seleniumDriver)
 		{
 			_seleniumDriver = seleniumDriver;
 		}
 
-		public string GetPageTitle()
+		public string GetPageLabel()
 		{
-			return _seleniumDriver.Title;
+			return _productLabel.Text; ;
 		}
 	}
 }

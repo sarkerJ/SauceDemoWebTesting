@@ -122,11 +122,25 @@ testRunner.Then("I should land on the products page", ((string)(null)), ((TechTa
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Invalid credentials - Login")]
         [NUnit.Framework.CategoryAttribute("Login")]
-        public virtual void InvalidCredentials_Login()
+        [NUnit.Framework.TestCaseAttribute("username", "password", "Epic sadface: Username and password do not match any user in this service", null)]
+        [NUnit.Framework.TestCaseAttribute("", "password", "Epic sadface: Username is required", null)]
+        [NUnit.Framework.TestCaseAttribute("username", "", "Epic sadface: Password is required", null)]
+        [NUnit.Framework.TestCaseAttribute("", "", "Epic sadface: Username is required", null)]
+        [NUnit.Framework.TestCaseAttribute("username", "secret_sauce", "Epic sadface: Username and password do not match any user in this service", null)]
+        [NUnit.Framework.TestCaseAttribute("standard_user", "password", "Epic sadface: Username and password do not match any user in this service", null)]
+        public virtual void InvalidCredentials_Login(string username, string password, string error, string[] exampleTags)
         {
-            string[] tagsOfScenario = new string[] {
+            string[] @__tags = new string[] {
                     "Login"};
+            if ((exampleTags != null))
+            {
+                @__tags = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(@__tags, exampleTags));
+            }
+            string[] tagsOfScenario = @__tags;
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
+            argumentsOfScenario.Add("Username", username);
+            argumentsOfScenario.Add("Password", password);
+            argumentsOfScenario.Add("Error", error);
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Invalid credentials - Login", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
 #line 15
 this.ScenarioInitialize(scenarioInfo);
@@ -151,21 +165,14 @@ this.ScenarioInitialize(scenarioInfo);
 #line 16
 testRunner.Given("I am on the login page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table1 = new TechTalk.SpecFlow.Table(new string[] {
-                            "Username",
-                            "Password"});
-                table1.AddRow(new string[] {
-                            "username",
-                            "password"});
 #line 17
-testRunner.And("I have supplied the following invalid credentials", ((string)(null)), table1, "And ");
+testRunner.And(string.Format("I have supplied the following {0} and {1}", username, password), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 20
+#line 18
 testRunner.When("I click the login button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 21
-testRunner.Then("I get the following error message \"Epic sadface: Username and password do not mat" +
-                        "ch any user in this service\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 19
+testRunner.Then(string.Format("I get the following error message {0}", error), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
