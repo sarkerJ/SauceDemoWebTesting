@@ -73,3 +73,24 @@ Examples:
 | id                | labelName |
 | item_4_title_link | Products  |
 
+@Basket
+Scenario: Adding product to cart
+Given I am on the products page
+When I add a product to cart <productindex>
+Then the cart count is 1
+And the button state <productindex> changes to <state>
+Examples: 
+| productindex | state  |
+| 1            | REMOVE |
+
+
+@Basket
+Scenario: Delete product from cart
+Given I am on the products page
+When I add a product to cart <productindex>
+And I click the button again to remove the product <productindex>
+Then the cart count is 0
+And the button state <productindex> changes to <state>
+Examples: 
+| productindex | state       |
+| 1            | ADD TO CART |

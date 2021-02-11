@@ -1,4 +1,5 @@
 ﻿using NUnit.Framework;
+using System;
 using System.Threading;
 using TechTalk.SpecFlow;
 
@@ -59,7 +60,6 @@ namespace SauceDemoWebTestingSolution
         }
 
 
-
         [When(@"I click on a product name (.*)")]
         public void WhenIClickOnAProductName(string productName)
         {
@@ -72,6 +72,32 @@ namespace SauceDemoWebTestingSolution
             SD_Website.SD_Products_Page.ClickBackButton();
             Thread.Sleep(3000);
         }
+
+        [When(@"I add a product to cart (.*)")]
+        public void WhenIAddAProductToCart(int productIndex)
+        {
+            SD_Website.SD_Products_Page.AddProductToCart(productIndex);
+        }
+
+        [When(@"I click the button again to remove the product (.*)")]
+        public void WhenIClickTheButtonAgainToRemoveTheProduct(int productIndex)
+        {
+            SD_Website.SD_Products_Page.AddProductToCart(productIndex);
+        }
+
+        [Then(@"the cart count is (.*)")]
+        public void ThenTheCartCountIs(string countValue)
+        {
+            Assert.That(SD_Website.SD_Products_Page.GetCartCount(), Is.EqualTo(countValue));
+        }
+
+
+        [Then(@"the button state (.*) changes to (.*)")]
+        public void ThenTheButtonStateChangesTo( int productIndex, string state)
+        {
+            Assert.That(SD_Website.SD_Products_Page.AddProductToCartButtonState(productIndex), Is.EqualTo(state));
+        }
+
 
 
         [Then(@"I should see a page with information of that product (.*)")]
