@@ -102,6 +102,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BDD\SD_LoginSteps.cs" />
+    <Compile Include="BDD\SD_ProductsSteps.cs" />
     <Compile Include="lib\driver_config\SeleniumDriverConfig.cs" />
     <Compile Include="lib\pages\SD_Products_Page.cs" />
     <Compile Include="lib\pages\SD_Login_Page.cs" />
@@ -112,6 +113,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="BDD\SD_Login.feature" />
+    <None Include="BDD\SD_Products.feature" />
     <None Include="packages.config" />
     <None Include="app.config" />
   </ItemGroup>
