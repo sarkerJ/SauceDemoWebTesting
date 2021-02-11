@@ -42,5 +42,12 @@ namespace SauceDemoWebTestingSolution
 		{
 			return _seleniumDriver.Title;
 		}
+
+		public void LogInValidCredentials()
+		{
+			VisitLoginPage();
+			EnterCredentials(new LoginCredentials());
+			ClickLogin();
+		}
 	}
 }
