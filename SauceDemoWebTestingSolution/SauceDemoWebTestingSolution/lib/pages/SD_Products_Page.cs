@@ -12,7 +12,7 @@ namespace SauceDemoWebTestingSolution
 		private IWebElement _facebook => _seleniumDriver.FindElement(By.ClassName("social_facebook"));
 		private IWebElement _linkedin => _seleniumDriver.FindElement(By.ClassName("social_linkedin"));
 		private IWebElement _productPageName => _seleniumDriver.FindElement(By.ClassName("inventory_details_name"));
-
+		private IWebElement _productPageBackButton => _seleniumDriver.FindElement(By.ClassName("inventory_details_back_button"));
 
 		public SD_Products_Page(IWebDriver seleniumDriver)
 		{
@@ -45,5 +45,10 @@ namespace SauceDemoWebTestingSolution
         {
 			return _productPageName.Text;
 		}
+
+		public void ClickBackButton()
+        {
+			_productPageBackButton.Click();
+        }
 	}
 }
