@@ -127,6 +127,13 @@ testRunner.Then(string.Format("I land on the given social media page {0}", socia
         }
         
         [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("Drop down menu selection")]
+        [NUnit.Framework.CategoryAttribute("Products")]
+        [NUnit.Framework.TestCaseAttribute("Name (A to Z)", null)]
+        public virtual void DropDownMenuSelection(string options, string[] exampleTags)
+        {
+            string[] @__tags = new string[] {
+                    "Products"};
         [NUnit.Framework.DescriptionAttribute("Accessing product specific page")]
         [NUnit.Framework.CategoryAttribute("Product")]
         [NUnit.Framework.TestCaseAttribute("item_4_title_link", "Sauce Labs Backpack", null)]
@@ -142,9 +149,12 @@ testRunner.Then(string.Format("I land on the given social media page {0}", socia
             }
             string[] tagsOfScenario = @__tags;
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
+            argumentsOfScenario.Add("options", options);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Drop down menu selection", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
             argumentsOfScenario.Add("id", id);
             argumentsOfScenario.Add("productPageName", productPageName);
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Accessing product specific page", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
+
 #line 19
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
@@ -169,6 +179,10 @@ this.ScenarioInitialize(scenarioInfo);
 testRunner.Given("I am on the products page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 21
+testRunner.When(string.Format("I select one of the possible sort alphabetically dropdown options {0}", options), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 22
+testRunner.Then("The products sort by the given alphabetical option", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 testRunner.When(string.Format("I click on a product name {0}", id), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 22
