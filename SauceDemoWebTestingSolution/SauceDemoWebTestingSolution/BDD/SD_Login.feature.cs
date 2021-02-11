@@ -128,6 +128,7 @@ testRunner.Then("I should land on the products page", ((string)(null)), ((TechTa
         [NUnit.Framework.TestCaseAttribute("", "", "Epic sadface: Username is required", null)]
         [NUnit.Framework.TestCaseAttribute("username", "secret_sauce", "Epic sadface: Username and password do not match any user in this service", null)]
         [NUnit.Framework.TestCaseAttribute("standard_user", "password", "Epic sadface: Username and password do not match any user in this service", null)]
+        [NUnit.Framework.TestCaseAttribute("locked_out_user", "secret_sauce", "Epic sadface: Sorry, this user has been locked out.", null)]
         public virtual void InvalidCredentials_Login(string username, string password, string error, string[] exampleTags)
         {
             string[] @__tags = new string[] {
