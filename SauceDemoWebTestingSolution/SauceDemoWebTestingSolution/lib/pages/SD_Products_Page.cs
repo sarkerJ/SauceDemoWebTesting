@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Linq;
 using OpenQA.Selenium;
 
 
@@ -26,6 +27,8 @@ namespace SauceDemoWebTestingSolution
 		private IWebElement _burgerMenuButton => _seleniumDriver.FindElement(By.ClassName("bm-burger-button"));
 		private IWebElement _logoutButton => _seleniumDriver.FindElement(By.Id("logout_sidebar_link"));
 
+		private IReadOnlyCollection<IWebElement> productItemsAddToCart => _seleniumDriver.FindElements(By.ClassName("btn_inventory"));
+		private IWebElement cartItemCount => _seleniumDriver.FindElement(By.ClassName("shopping_cart_badge"));
 
 		public SD_Products_Page(IWebDriver seleniumDriver)
 		{
@@ -95,5 +98,17 @@ namespace SauceDemoWebTestingSolution
 		{
 			_logoutButton.Click();
 		}
+
+		public void AddProductToCart(int productIndex)
+		{
+			 productItemsAddToCart.ToArray()[productIndex].Click();
+		}
+		public string AddProductToCartButtonState(int index) => productItemsAddToCart.ToArray()[index].Text;
+
+		public string GetCartCount()
+		{
+			try { return cartItemCount.Text; } catch (Exception) { return "0"; }
+		}
+
 	}
 }
