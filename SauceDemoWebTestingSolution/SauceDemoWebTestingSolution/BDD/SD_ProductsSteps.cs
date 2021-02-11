@@ -1,4 +1,5 @@
 ﻿using NUnit.Framework;
+using System.Threading;
 using TechTalk.SpecFlow;
 
 namespace SauceDemoWebTestingSolution.BDD
@@ -11,7 +12,7 @@ namespace SauceDemoWebTestingSolution.BDD
         [Given(@"I am on the products page")]
         public void GivenIAmOnTheProductsPage()
         {
-            ScenarioContext.Current.Pending();
+            SD_Website.SD_Products_Page.VisitProductsPage();
         }
         
         [When(@"I click on the following social media widget (.*)")]
@@ -23,7 +24,22 @@ namespace SauceDemoWebTestingSolution.BDD
         [Then(@"I land on the given social media page (.*)")]
         public void ThenILandOnTheGivenSocialMediaPage(string url)
         {
-            // Assert.That(, Does.Contain(url));
+            ScenarioContext.Current.Pending();
         }
+
+        [When(@"I click on a product name (.*)")]
+        public void WhenIClickOnAProductName(string productName)
+        {
+            SD_Website.SD_Products_Page.ClickProductItem(productName);
+        }
+
+        [Then(@"I should see a page with information of that product (.*)")]
+        public void ThenIShouldSeeAPageWithInformationOfThatProduct(string expected)
+        {
+            Thread.Sleep(3000);
+            Assert.That(SD_Website.SD_Products_Page.GetProductPageName, Is.EqualTo(expected));
+        }
+
+
     }
 }

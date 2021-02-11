@@ -1,4 +1,5 @@
 ﻿using OpenQA.Selenium;
+using System.Collections.ObjectModel;
 
 namespace SauceDemoWebTestingSolution
 {
@@ -10,6 +11,7 @@ namespace SauceDemoWebTestingSolution
 		private IWebElement _twitter => _seleniumDriver.FindElement(By.ClassName("social_twitter"));
 		private IWebElement _facebook => _seleniumDriver.FindElement(By.ClassName("social_facebook"));
 		private IWebElement _linkedin => _seleniumDriver.FindElement(By.ClassName("social_linkedin"));
+		private IWebElement _productPageName => _seleniumDriver.FindElement(By.ClassName("inventory_details_name"));
 
 
 		public SD_Products_Page(IWebDriver seleniumDriver)
@@ -32,6 +34,16 @@ namespace SauceDemoWebTestingSolution
 		public string GetPageLabel()
 		{
 			return _productLabel.Text; ;
+		}
+
+		public void ClickProductItem(string productid)
+        {
+			_seleniumDriver.FindElement(By.Id(productid)).Click();
+		}
+
+		public string GetProductPageName()
+        {
+			return _productPageName.Text;
 		}
 	}
 }
