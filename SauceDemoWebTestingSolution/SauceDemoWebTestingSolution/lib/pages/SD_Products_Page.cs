@@ -16,7 +16,10 @@ namespace SauceDemoWebTestingSolution
 		private IWebElement _linkedin => _seleniumDriver.FindElement(By.ClassName("social_linkedin"));
 		private IWebElement _dropDown => _seleniumDriver.FindElement(By.ClassName("product_sort_container"));
 		private ReadOnlyCollection<IWebElement> _productsList => _seleniumDriver.FindElements(By.ClassName("inventory_item_name"));
+		private ReadOnlyCollection<IWebElement> _productsByPriceList => _seleniumDriver.FindElements(By.ClassName("inventory_item_price"));
+
 		private List<string> _sortedList;
+		private List<decimal> _pricesSortedList;
 
 		private IWebElement _productPageName => _seleniumDriver.FindElement(By.ClassName("inventory_details_name"));
 		private IWebElement _productPageBackButton => _seleniumDriver.FindElement(By.ClassName("inventory_details_back_button"));
@@ -43,11 +46,18 @@ namespace SauceDemoWebTestingSolution
 			_dropDown.SendKeys(option);
 		}
 
-		public List<string> ListOfProducts()
+		public List<string> AlphabeticalListOfProducts()
 		{
 			_sortedList = new List<string>();
 			foreach (var item in _productsList) _sortedList.Add(item.Text);
 			return _sortedList;
+		}
+
+		public List<decimal> SortedListOfProductsByPrice()
+		{
+			_pricesSortedList = new List<decimal>();
+			foreach (var item in _productsByPriceList) _pricesSortedList.Add(decimal.Parse(item.Text.Remove(0,1)));
+			return _pricesSortedList;
 		}
 		public string GetPageUrl()
 		{

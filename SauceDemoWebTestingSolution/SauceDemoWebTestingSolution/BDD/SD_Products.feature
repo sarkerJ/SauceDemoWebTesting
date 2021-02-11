@@ -16,13 +16,40 @@ Examples:
 | linkedin | www.linkedin.com  |
 
 @Products
-Scenario: Drop down menu selection
+Scenario: Drop down menu selection - Sort by A to Z
 Given I am on the products page
-When I select one of the possible sort alphabetically dropdown options <options>
-Then The products sort by the given alphabetical option
-Examples:
-| options       |
+When I select to sort by <option> from the dropdown menue
+Then The products sort alphabetically from A to Z
+Examples: 
+| option        |
 | Name (A to Z) |
+
+@Products
+Scenario: Drop down menu selection - Sort by Z to A
+Given I am on the products page
+When I select to sort by <option> from the dropdown menue
+Then The products sort alphabetically from Z to A
+Examples: 
+| option        |
+| Name (Z to A) |
+
+@Products
+Scenario: Drop down menu selection - Sort by Price - Low to High
+Given I am on the products page
+When I select to sort by <option> from the dropdown menue
+Then The products sort by price from low to high
+Examples: 
+| option              |
+| Price (low to high) |
+
+@Products
+Scenario: Drop down menu selection - Sort by Price - High to Low
+Given I am on the products page
+When I select to sort by <option> from the dropdown menue
+Then The products sort by price from high to low
+Examples: 
+| option              |
+| Price (high to low) |
 
 @Product
 Scenario: Accessing product specific page

@@ -21,10 +21,11 @@ namespace SauceDemoWebTestingSolution
             SD_Website.SD_Products_Page.ClickSocialMedia(media);
         }
 
-        [When(@"I select one of the possible sort alphabetically dropdown options (.*)")]
-        public void WhenISelectOneOfThePossibleSortAlphabeticallyDropdownOptions(string option)
+
+        [When(@"I select to sort by (.*) from the dropdown menue")]
+        public void WhenISelectToSortByFromTheDropdownMenue(string option)
         {
-            SD_Website.SD_Products_Page.SelectDropDownOption(option);
+             SD_Website.SD_Products_Page.SelectDropDownOption(option);
         }
 
         [Then(@"I land on the given social media page (.*)")]
@@ -33,13 +34,31 @@ namespace SauceDemoWebTestingSolution
             Assert.That(SD_Website.SD_Products_Page.GetPageUrl(), Does.Contain(url));
         }
 
-        [Then(@"The products sort by the given alphabetical option")]
-        public void ThenTheProductsSortByTheGivenAlphabeticalOption()
+        [Then(@"The products sort alphabetically from A to Z")]
+        public void ThenTheProductsSortAlphabeticallyFromAToZ()
         {
-            Assert.That(SD_Website.SD_Products_Page.ListOfProducts(), Is.Ordered.Ascending);
+            Assert.That(SD_Website.SD_Products_Page.AlphabeticalListOfProducts(), Is.Ordered.Ascending);
         }
 
-        
+        [Then(@"The products sort alphabetically from Z to A")]
+        public void ThenTheProductsSortAlphabeticallyFromZToA()
+        {
+            Assert.That(SD_Website.SD_Products_Page.AlphabeticalListOfProducts(), Is.Ordered.Descending);
+        }
+
+        [Then(@"The products sort by price from low to high")]
+        public void ThenTheProductsSortByPriceFromLowToHigh()
+        {
+            Assert.That(SD_Website.SD_Products_Page.SortedListOfProductsByPrice(), Is.Ordered.Ascending);
+        }
+
+        [Then(@"The products sort by price from high to low")]
+        public void ThenTheProductsSortByPriceFromHighToLow()
+        {
+            Assert.That(SD_Website.SD_Products_Page.SortedListOfProductsByPrice(), Is.Ordered.Descending);
+        }
+
+
 
         [When(@"I click on a product name (.*)")]
         public void WhenIClickOnAProductName(string productName)
