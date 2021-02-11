@@ -39,13 +39,7 @@ namespace SauceDemoWebTestingSolution
             Assert.That(SD_Website.SD_Products_Page.ListOfProducts(), Is.Ordered.Ascending);
         }
 
-        [AfterScenario]
-        public void DisposableWebDriver()
-        {
-            SD_Website.SeleniumDriver.Quit();
-            SD_Website.SeleniumDriver.Dispose();
-            ScenarioContext.Current.Pending();
-        }
+        
 
         [When(@"I click on a product name (.*)")]
         public void WhenIClickOnAProductName(string productName)
@@ -74,7 +68,12 @@ namespace SauceDemoWebTestingSolution
             Assert.That(SD_Website.SD_Products_Page.GetPageLabel(), Does.Contain(name));
         }
 
-
+        [AfterScenario]
+        public void DisposableWebDriver()
+        {
+            SD_Website.SeleniumDriver.Quit();
+            SD_Website.SeleniumDriver.Dispose();
+        }
 
 
     }

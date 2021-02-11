@@ -134,15 +134,6 @@ testRunner.Then(string.Format("I land on the given social media page {0}", socia
         {
             string[] @__tags = new string[] {
                     "Products"};
-        [NUnit.Framework.DescriptionAttribute("Accessing product specific page")]
-        [NUnit.Framework.CategoryAttribute("Product")]
-        [NUnit.Framework.TestCaseAttribute("item_4_title_link", "Sauce Labs Backpack", null)]
-        [NUnit.Framework.TestCaseAttribute("item_0_title_link", "Sauce Labs Bike Light", null)]
-        [NUnit.Framework.TestCaseAttribute("item_5_title_link", "Sauce Labs Fleece Jacket", null)]
-        public virtual void AccessingProductSpecificPage(string id, string productPageName, string[] exampleTags)
-        {
-            string[] @__tags = new string[] {
-                    "Product"};
             if ((exampleTags != null))
             {
                 @__tags = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(@__tags, exampleTags));
@@ -151,10 +142,6 @@ testRunner.Then(string.Format("I land on the given social media page {0}", socia
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             argumentsOfScenario.Add("options", options);
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Drop down menu selection", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-            argumentsOfScenario.Add("id", id);
-            argumentsOfScenario.Add("productPageName", productPageName);
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Accessing product specific page", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-
 #line 19
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
@@ -183,9 +170,57 @@ testRunner.When(string.Format("I select one of the possible sort alphabetically 
 #line hidden
 #line 22
 testRunner.Then("The products sort by the given alphabetical option", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            }
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("Accessing product specific page")]
+        [NUnit.Framework.CategoryAttribute("Product")]
+        [NUnit.Framework.TestCaseAttribute("item_4_title_link", "Sauce Labs Backpack", null)]
+        [NUnit.Framework.TestCaseAttribute("item_0_title_link", "Sauce Labs Bike Light", null)]
+        [NUnit.Framework.TestCaseAttribute("item_5_title_link", "Sauce Labs Fleece Jacket", null)]
+        public virtual void AccessingProductSpecificPage(string id, string productPageName, string[] exampleTags)
+        {
+            string[] @__tags = new string[] {
+                    "Product"};
+            if ((exampleTags != null))
+            {
+                @__tags = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(@__tags, exampleTags));
+            }
+            string[] tagsOfScenario = @__tags;
+            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
+            argumentsOfScenario.Add("id", id);
+            argumentsOfScenario.Add("productPageName", productPageName);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Accessing product specific page", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
+#line 28
+this.ScenarioInitialize(scenarioInfo);
+#line hidden
+            bool isScenarioIgnored = default(bool);
+            bool isFeatureIgnored = default(bool);
+            if ((tagsOfScenario != null))
+            {
+                isScenarioIgnored = tagsOfScenario.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
+            }
+            if ((this._featureTags != null))
+            {
+                isFeatureIgnored = this._featureTags.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
+            }
+            if ((isScenarioIgnored || isFeatureIgnored))
+            {
+                testRunner.SkipScenario();
+            }
+            else
+            {
+                this.ScenarioStart();
+#line 29
+testRunner.Given("I am on the products page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line hidden
+#line 30
 testRunner.When(string.Format("I click on a product name {0}", id), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 22
+#line 31
 testRunner.Then(string.Format("I should see a page with information of that product {0}", productPageName), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
@@ -209,7 +244,7 @@ testRunner.Then(string.Format("I should see a page with information of that prod
             argumentsOfScenario.Add("id", id);
             argumentsOfScenario.Add("labelName", labelName);
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Going back to product page", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 31
+#line 40
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -229,16 +264,16 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 32
+#line 41
 testRunner.Given("I am on the products page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 33
+#line 42
 testRunner.When(string.Format("I click on a product name {0}", id), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 34
+#line 43
 testRunner.And("I click the back button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 35
+#line 44
 testRunner.Then(string.Format("I should land on the products page again {0}", labelName), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
