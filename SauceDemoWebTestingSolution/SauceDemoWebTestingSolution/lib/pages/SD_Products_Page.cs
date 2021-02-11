@@ -17,6 +17,11 @@ namespace SauceDemoWebTestingSolution
 		private IWebElement _dropDown => _seleniumDriver.FindElement(By.ClassName("product_sort_container"));
 		private ReadOnlyCollection<IWebElement> _productsList => _seleniumDriver.FindElements(By.ClassName("inventory_item_name"));
 		private List<string> _sortedList;
+
+		private IWebElement _productPageName => _seleniumDriver.FindElement(By.ClassName("inventory_details_name"));
+		private IWebElement _productPageBackButton => _seleniumDriver.FindElement(By.ClassName("inventory_details_back_button"));
+
+
 		public SD_Products_Page(IWebDriver seleniumDriver)
 		{
 			_seleniumDriver = seleniumDriver;
@@ -53,7 +58,21 @@ namespace SauceDemoWebTestingSolution
 		{
 			return _productLabel.Text; ;
 		}
+    
+		public void ClickProductItem(string productid)
+        {
+			_seleniumDriver.FindElement(By.Id(productid)).Click();
+		}
 
+		public string GetProductPageName()
+        {
+			return _productPageName.Text;
+		}
+
+		public void ClickBackButton()
+        {
+			_productPageBackButton.Click();
+        }
 
 	}
 }
