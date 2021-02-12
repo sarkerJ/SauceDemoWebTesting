@@ -128,6 +128,7 @@ testRunner.Then("I land on the Checkout: Overview page", ((string)(null)), ((Tec
         [NUnit.Framework.TestCaseAttribute("fName", "", "", "Error: Last Name is required", null)]
         [NUnit.Framework.TestCaseAttribute("", "lName", "", "Error: First Name is required", null)]
         [NUnit.Framework.TestCaseAttribute("", "", "zip", "Error: First Name is required", null)]
+        [NUnit.Framework.TestCaseAttribute("", "", "", "Error: First Name is required", null)]
         public virtual void InvalidCredentials_CheckoutInfo(string firstName, string lastName, string zip, string error, string[] exampleTags)
         {
             string[] @__tags = new string[] {
@@ -188,7 +189,7 @@ testRunner.Then(string.Format("I get the following expected error message {0}", 
                     "CheckoutInfo"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Cancel Button - Checkout Info", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 30
+#line 32
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -208,13 +209,13 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 31
+#line 33
 testRunner.Given("I am on the checkout info page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 32
+#line 34
 testRunner.And("I click the cancel button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 33
+#line 35
 testRunner.Then("I land on the Cart landing page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }

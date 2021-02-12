@@ -25,6 +25,8 @@ Examples:
 | fName      |           |     | Error: Last Name is required      |
 |            | lName     |     | Error: First Name is required     |
 |            |           | zip | Error: First Name is required     |
+|            |           |     | Error: First Name is required     |
+
 
 @CheckoutInfo
 Scenario: Cancel Button - Checkout Info

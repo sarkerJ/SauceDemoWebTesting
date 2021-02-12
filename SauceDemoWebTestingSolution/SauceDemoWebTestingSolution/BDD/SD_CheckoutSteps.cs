@@ -1,13 +1,14 @@
 ﻿using System.Threading;
 using TechTalk.SpecFlow;
 using NUnit.Framework;
+using OpenQA.Selenium.Chrome;
 
 namespace SauceDemoWebTestingSolution.BDD
 {
     [Binding]
     public class SD_CheckoutSteps
     {
-        public SD_Website SD_Website { get; } = new SD_Website("chrome");
+        public SD_Website<ChromeDriver> SD_Website { get; } = new SD_Website<ChromeDriver>();
 
         [Given(@"I am on the products page again")]
         public void GivenIAmOnTheProductsPageAgain()

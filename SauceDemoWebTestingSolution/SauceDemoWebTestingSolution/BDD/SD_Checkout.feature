@@ -14,6 +14,7 @@ Then I land on the correct page <landing page url>
 Examples:
 | number of items | landing page url                                 |
 | 0               | https://www.saucedemo.com/cart.html              |
+| 1               | https://www.saucedemo.com/checkout-step-one.html |
 | 4               | https://www.saucedemo.com/checkout-step-one.html |
 
 @Checkout

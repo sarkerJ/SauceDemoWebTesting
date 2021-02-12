@@ -78,6 +78,7 @@ namespace SauceDemoWebTestingSolution.BDD
         [NUnit.Framework.DescriptionAttribute("Items in my basket - Checkout")]
         [NUnit.Framework.CategoryAttribute("Checkout")]
         [NUnit.Framework.TestCaseAttribute("0", "https://www.saucedemo.com/cart.html", null)]
+        [NUnit.Framework.TestCaseAttribute("1", "https://www.saucedemo.com/checkout-step-one.html", null)]
         [NUnit.Framework.TestCaseAttribute("4", "https://www.saucedemo.com/checkout-step-one.html", null)]
         public virtual void ItemsInMyBasket_Checkout(string numberOfItems, string landingPageUrl, string[] exampleTags)
         {
@@ -148,7 +149,7 @@ testRunner.Then(string.Format("I land on the correct page {0}", landingPageUrl),
             argumentsOfScenario.Add("number of items", numberOfItems);
             argumentsOfScenario.Add("landing page url", landingPageUrl);
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Items in my basket - Continue Shopping", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 20
+#line 21
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -168,19 +169,19 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 21
+#line 22
 testRunner.Given("I am on the products page again", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 22
+#line 23
 testRunner.And(string.Format("I have the following amount of items in my basket {0}", numberOfItems), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 23
+#line 24
 testRunner.When("I go to My Basket page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 24
+#line 25
 testRunner.And("I click continue shopping", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 25
+#line 26
 testRunner.Then(string.Format("I land on the correct page {0}", landingPageUrl), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }

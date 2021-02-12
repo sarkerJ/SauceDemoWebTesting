@@ -1,4 +1,5 @@
 ﻿using NUnit.Framework;
+using OpenQA.Selenium.Chrome;
 using TechTalk.SpecFlow;
 
 namespace SauceDemoWebTestingSolution.BDD
@@ -6,7 +7,7 @@ namespace SauceDemoWebTestingSolution.BDD
     [Binding]
     public class SD_Checkout_InfoSteps
     {
-        public SD_Website SD_Website { get; } = new SD_Website("chrome");
+        public SD_Website<ChromeDriver> SD_Website { get; } = new SD_Website<ChromeDriver>();
         private CheckoutCredentials _checkoutCredentials;
 
         [Given(@"I am on the checkout info page")]
