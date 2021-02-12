@@ -1,17 +1,21 @@
 # Sauce Demo Web Testing
 
 ##### Table of Contents
-[Introduction](#Introduction)
+1. [Introduction](#Introduction)
 
-[Project Goal](#Project-Goal)
+2. [Project Goal](#Project-Goal)
 
-[Testing Framework Structure](#Testing-Framework-Structure)
+3. [Testing Framework Structure](#Testing-Framework-Structure)
 
-[BDD Tests](#BDD-Tests)
+4. [BDD Tests](#BDD-Tests)
 
-[Sprint Review](#Sprint-Review)
+5. [Test Cases](#Test-Cases)
 
-[Sprint Retrospective](#Sprint-Retrospective)
+6. [Discovered Issues with the Sauce Demo](#Discovered-Issues-with-the-Sauce-Demo)
+
+7. [Sprint Review](#Sprint-Review)
+
+8. [Sprint Retrospective](#Sprint-Retrospective)
 
 ## Introduction
 The purpose of this project is to make a web testing framework for the Swag Labs Sauce Demo website. The website under test can be found [here](https://www.saucedemo.com/).
@@ -57,7 +61,7 @@ These feature steps are then converted into snippets of code using the methods f
 ![image](./Screenshots/When.PNG)
 ![image](./Screenshots/Then.PNG)
 
-## Tests
+## Test Cases
 
 The tests which were carried out are as follows:
 
