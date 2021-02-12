@@ -1,4 +1,5 @@
 ﻿using NUnit.Framework;
+using OpenQA.Selenium.Chrome;
 using System;
 using System.Threading;
 using TechTalk.SpecFlow;
@@ -8,7 +9,7 @@ namespace SauceDemoWebTestingSolution
     [Binding]
     public class SD_ProductsSteps
     {
-        public SD_Website SD_Website { get; } = new SD_Website("chrome");
+        public SD_Website<ChromeDriver> SD_Website { get; } = new SD_Website<ChromeDriver>();
 
         [Given(@"I am on the products page")]
         public void GivenIAmOnTheProductsPage()

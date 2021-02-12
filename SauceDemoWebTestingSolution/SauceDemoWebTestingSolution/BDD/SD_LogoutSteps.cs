@@ -1,5 +1,6 @@
 ﻿using System;
 using NUnit.Framework;
+using OpenQA.Selenium.Chrome;
 using TechTalk.SpecFlow;
 
 namespace SauceDemoWebTestingSolution.BDD
@@ -7,7 +8,7 @@ namespace SauceDemoWebTestingSolution.BDD
     [Binding]
     public class SD_LogoutSteps
     {
-        public SD_Website SD_Website { get; } = new SD_Website("chrome");
+        public SD_Website<ChromeDriver> SD_Website { get; } = new SD_Website<ChromeDriver>();
         private LoginCredentials _loginCredentials = new LoginCredentials();
         [Given(@"I am logged in")]
         public void GivenIAmLoggedIn()
