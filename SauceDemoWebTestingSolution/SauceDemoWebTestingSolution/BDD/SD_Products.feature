@@ -81,7 +81,8 @@ Then the cart count is 1
 And the button state <productindex> changes to <state>
 Examples: 
 | productindex | state  |
-| 1            | REMOVE |
+| 0            | REMOVE |
+
 
 
 @Basket
