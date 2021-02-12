@@ -1,17 +1,17 @@
 # Sauce Demo Web Testing
 
 ##### Table of Contents
-[Introduction]
+[Introduction](#Introduction)
 
-[Project Goal]
+[Project Goal](#Project-Goal)
 
-[Testing Framework Structure]
+[Testing Framework Structure](#Testing-Framework-Structure)
 
-[BDD Tests]
+[BDD Tests](#BDD-Tests)
 
-[Sprint Review]
+[Sprint Review](#Sprint-Review)
 
-[Sprint Retrospective]
+[Sprint Retrospective](#Sprint-Retrospective)
 
 ## Introduction
 The purpose of this project is to make a web testing framework for the Swag Labs Sauce Demo website. The website under test can be found [here](https://www.saucedemo.com/).
@@ -56,6 +56,42 @@ These feature steps are then converted into snippets of code using the methods f
 ![image](./Screenshots/Given.PNG)
 ![image](./Screenshots/When.PNG)
 ![image](./Screenshots/Then.PNG)
+
+## Tests
+
+The tests which were carried out are as follows:
+
+ - [User Story 1: Login](https://github.com/sarkerJ/SauceDemoWebTesting/projects/1#card-54647923)
+   - [Test Case 1.1](https://github.com/sarkerJ/SauceDemoWebTesting/projects/1#card-54652849)
+   - [Test Case 1.2](https://github.com/sarkerJ/SauceDemoWebTesting/projects/1#card-54652943)
+   - [Test Case 1.3](https://github.com/sarkerJ/SauceDemoWebTesting/projects/1#card-54654090)
+   - [Test Case 1.4](https://github.com/sarkerJ/SauceDemoWebTesting/projects/1#card-54654243)
+   - [Test Case 1.5](https://github.com/sarkerJ/SauceDemoWebTesting/projects/1#card-54653008)
+   - [Test Case 1.6](https://github.com/sarkerJ/SauceDemoWebTesting/projects/1#card-54653034)
+   - [Test Case 1.7](https://github.com/sarkerJ/SauceDemoWebTesting/projects/1#card-54713547)
+   - [Test Case 1.8](https://github.com/sarkerJ/SauceDemoWebTesting/projects/1#card-54715481)
+ - [User Story 2: Inventory](https://github.com/sarkerJ/SauceDemoWebTesting/projects/1#card-54648203)
+   - [Test Case 2.1](https://github.com/sarkerJ/SauceDemoWebTesting/projects/1#card-54702730)
+   - [Test Case 2.2](https://github.com/sarkerJ/SauceDemoWebTesting/projects/1#card-54704191)
+ - [User Story 3: Product](https://github.com/sarkerJ/SauceDemoWebTesting/projects/1#card-54649106)
+   - [Test Case 3.1](https://github.com/sarkerJ/SauceDemoWebTesting/projects/1#card-54702817)
+   - [Test Case 3.2](https://github.com/sarkerJ/SauceDemoWebTesting/projects/1#card-54702866)
+ - [User Story 4: Basket](https://github.com/sarkerJ/SauceDemoWebTesting/projects/1#card-54648685)
+   - [Test Case 4.1](https://github.com/sarkerJ/SauceDemoWebTesting/projects/1#card-54702949)
+   - [Test Case 4.2](https://github.com/sarkerJ/SauceDemoWebTesting/projects/1#card-54702988)
+ - [User Story 5: Checkout](https://github.com/sarkerJ/SauceDemoWebTesting/projects/1#card-54648711)
+   - [Test Case 5.1](https://github.com/sarkerJ/SauceDemoWebTesting/projects/1#card-54703054)
+   - [Test Case 5.2](https://github.com/sarkerJ/SauceDemoWebTesting/projects/1#card-54703120)
+   - [Test Case 5.3](https://github.com/sarkerJ/SauceDemoWebTesting/projects/1#card-54703155)
+ - [User Story 6: Checkout - Your Info Page](https://github.com/sarkerJ/SauceDemoWebTesting/projects/1#card-54789023)
+   - [Test Case 6.1](https://github.com/sarkerJ/SauceDemoWebTesting/projects/1#card-54789198)
+   - [Test Case 6.2](https://github.com/sarkerJ/SauceDemoWebTesting/projects/1#card-54789241)
+   - [Test Case 6.3](https://github.com/sarkerJ/SauceDemoWebTesting/projects/1#card-54789323)
+ - [User Story 7: Checkout - Overview](https://github.com/sarkerJ/SauceDemoWebTesting/projects/1#card-54789629)
+   - [Test Case 7.1](https://github.com/sarkerJ/SauceDemoWebTesting/projects/1#card-54790662)
+   - [Test Case 7.2](https://github.com/sarkerJ/SauceDemoWebTesting/projects/1#card-54790707)
+ - [User Story 8: Logging Out](https://github.com/sarkerJ/SauceDemoWebTesting/projects/1#card-54650282)
+   - [Test Case 8.1](https://github.com/sarkerJ/SauceDemoWebTesting/projects/1#card-54737968)
 
 ## Discovered Issues with the Sauce Demo
 
