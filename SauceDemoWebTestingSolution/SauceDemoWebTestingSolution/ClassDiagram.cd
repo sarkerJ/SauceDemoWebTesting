@@ -29,6 +29,13 @@
         <Position X="-0.015" Y="0.216" Height="0.182" Width="1.364" />
       </MemberNameLabel>
     </AssociationLine>
+    <AssociationLine Name="SD_Checkout_Info_Page" Type="SauceDemoWebTestingSolution.SD_Checkout_Info_Page" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="7.5" Y="5.5" />
+        <Point X="7.5" Y="2.281" />
+        <Point X="8.75" Y="2.281" />
+      </Path>
+    </AssociationLine>
     <TypeIdentifier>
       <HashCode>AAAAAAAIAAAAAAAAAAAAAAAAAAAAAgAAAAAAAJAAAAI=</HashCode>
       <FileName>lib\SD_Website.cs</FileName>
@@ -36,8 +43,8 @@
     <ShowAsAssociation>
       <Property Name="SD_Login_Page" />
       <Property Name="SD_Products_Page" />
-      <Property Name="SD_Checkout_Info_Page" />
       <Property Name="SD_Checkout_Page" />
+      <Property Name="SD_Checkout_Info_Page" />
     </ShowAsAssociation>
   </Class>
   <Class Name="SauceDemoWebTestingSolution.SD_ProductsSteps">
