@@ -80,7 +80,7 @@
     </ShowAsAssociation>
   </Class>
   <Class Name="SauceDemoWebTestingSolution.SD_Login_Page">
-    <Position X="6.25" Y="0.75" Width="1.75" />
+    <Position X="6.25" Y="1.5" Width="1.75" />
     <Compartments>
       <Compartment Name="Properties" Collapsed="true" />
     </Compartments>
@@ -98,6 +98,13 @@
     <TypeIdentifier>
       <HashCode>EAACAIgAADAAAQAAAAwVgAiAIIAEUAxRCgCEAgAAAAE=</HashCode>
       <FileName>lib\pages\SD_Products_Page.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SauceDemoWebTestingSolution.LoginCredentials" Collapsed="true">
+    <Position X="6.25" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAQAAAAAAAAAAAAACAAAAAAAAAAA=</HashCode>
+      <FileName>lib\utils\LoginCredentials.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Font Name="Segoe UI" Size="9" />
