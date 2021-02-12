@@ -119,6 +119,7 @@
     <None Include="BDD\SD_Login.feature" />
     <None Include="BDD\SD_Logout.feature" />
     <None Include="BDD\SD_Products.feature" />
+    <None Include="ClassDiagram.cd" />
     <None Include="packages.config" />
     <None Include="app.config" />
   </ItemGroup>
