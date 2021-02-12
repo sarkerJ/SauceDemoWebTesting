@@ -130,7 +130,7 @@
     </TypeIdentifier>
   </Class>
   <Class Name="SauceDemoWebTestingSolution.LoginCredentials" Collapsed="true">
-    <Position X="8.75" Y="0.5" Width="1.5" />
+    <Position X="6.75" Y="7.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAQAAAAAAAAAAAAACAAAAAAAAAAA=</HashCode>
       <FileName>lib\utils\LoginCredentials.cs</FileName>
@@ -188,6 +188,13 @@
     <TypeIdentifier>
       <HashCode>AAAAAAAAACAAAAABAIAAAUAAAAAEAAAAAgAAAAAAAAA=</HashCode>
       <FileName>lib\pages\SD_Checkout_Page.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SauceDemoWebTestingSolution.CheckoutCredentials" Collapsed="true">
+    <Position X="6.5" Y="8.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAg=</HashCode>
+      <FileName>lib\utils\CheckoutCredentials.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Font Name="Segoe UI" Size="9" />
