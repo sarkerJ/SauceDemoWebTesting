@@ -111,6 +111,7 @@ The tests which were carried out are as follows:
 
     - The quantity is stored for all users and is not unique to the individual logged in
     - Going to the inventory url skips signing in
+    - For certain users when logged in, the product images don't load
 
 - Resetting the app state
   
