@@ -117,7 +117,7 @@ The tests which were carried out are as follows:
   
    - If you click "Reset App State", it doesn't reset the "Add To Cart/Remove" Button
    - The dropdown filter also doesn't reset
-   - If you are in your basket and reset, the item remains in the basket, but the basket count remains
+   - If you are in your basket and reset, the item remains in the basket, but the basket count resets
    - It also doesn't revert to the Products landing page
 
 ## Sprint Review
