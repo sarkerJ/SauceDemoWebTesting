@@ -26,6 +26,8 @@ namespace SauceDemoWebTestingSolution
 		private IWebElement _productPageBackButton => _seleniumDriver.FindElement(By.ClassName("inventory_details_back_button"));
 		private IWebElement _burgerMenuButton => _seleniumDriver.FindElement(By.ClassName("bm-burger-button"));
 		private IWebElement _logoutButton => _seleniumDriver.FindElement(By.Id("logout_sidebar_link"));
+		private IWebElement _basketButton => _seleniumDriver.FindElement(By.ClassName("shopping_cart_link"));
+
 
 		private IReadOnlyCollection<IWebElement> productItemsAddToCart => _seleniumDriver.FindElements(By.ClassName("btn_inventory"));
 		private IWebElement cartItemCount => _seleniumDriver.FindElement(By.ClassName("shopping_cart_badge"));
@@ -99,6 +101,17 @@ namespace SauceDemoWebTestingSolution
 			_logoutButton.Click();
 		}
 
+		public void ClickBasketButton()
+		{
+			_basketButton.Click();
+		}
+		public void AddMultipleItemsToCart(int items)
+		{
+			for(int i = 0; i < items; i++)
+			{
+				productItemsAddToCart.ToArray()[i].Click();
+			}
+		}
 		public void AddProductToCart(int productIndex)
 		{
 			 productItemsAddToCart.ToArray()[productIndex].Click();

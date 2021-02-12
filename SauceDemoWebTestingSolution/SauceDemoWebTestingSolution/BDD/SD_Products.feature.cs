@@ -430,7 +430,7 @@ testRunner.Then(string.Format("I should land on the products page again {0}", la
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Adding product to cart")]
         [NUnit.Framework.CategoryAttribute("Basket")]
-        [NUnit.Framework.TestCaseAttribute("1", "REMOVE", null)]
+        [NUnit.Framework.TestCaseAttribute("0", "REMOVE", null)]
         public virtual void AddingProductToCart(string productindex, string state, string[] exampleTags)
         {
             string[] @__tags = new string[] {
@@ -497,7 +497,7 @@ testRunner.And(string.Format("the button state {0} changes to {1}", productindex
             argumentsOfScenario.Add("productindex", productindex);
             argumentsOfScenario.Add("state", state);
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Delete product from cart", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 88
+#line 89
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -517,19 +517,19 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 89
+#line 90
 testRunner.Given("I am on the products page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 90
+#line 91
 testRunner.When(string.Format("I add a product to cart {0}", productindex), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 91
+#line 92
 testRunner.And(string.Format("I click the button again to remove the product {0}", productindex), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 92
+#line 93
 testRunner.Then("the cart count is 0", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-#line 93
+#line 94
 testRunner.And(string.Format("the button state {0} changes to {1}", productindex, state), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             }
