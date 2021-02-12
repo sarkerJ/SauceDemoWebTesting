@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="SauceDemoWebTestingSolution.SD_Website&lt;driverType&gt;">
+    <Position X="4.5" Y="5.5" Width="3.25" />
+    <AssociationLine Name="SD_Products_Page" Type="SauceDemoWebTestingSolution.SD_Products_Page" FixedToPoint="true">
+      <Path>
+        <Point X="7.75" Y="6.625" />
+        <Point X="8.5" Y="6.625" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAIAAAAAAAAAAAAAAAAAAAAAgAAAAAAAIAAAAI=</HashCode>
+      <FileName>lib\SD_Website.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="SD_Products_Page" />
+      <Property Name="SD_Login_Page" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="SauceDemoWebTestingSolution.SD_ProductsSteps" Collapsed="true">
+    <Position X="0.5" Y="2.25" Width="1.5" />
+    <AssociationLine Name="SD_Website" Type="SauceDemoWebTestingSolution.SD_Website&lt;driverType&gt;" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="2" Y="2.531" />
+        <Point X="4.875" Y="2.531" />
+        <Point X="4.875" Y="5.5" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.102" Y="2.495" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAEAAQAAYQAAAAAASEAAwAAgAAAAAAAAAEAAABQRAA=</HashCode>
+      <FileName>BDD\SD_ProductsSteps.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="SD_Website" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="SauceDemoWebTestingSolution.BDD.SD_LogoutSteps" Collapsed="true">
+    <Position X="0.5" Y="1" Width="1.5" />
+    <AssociationLine Name="SD_Website" Type="SauceDemoWebTestingSolution.SD_Website&lt;driverType&gt;" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="2" Y="1.281" />
+        <Point X="5.375" Y="1.281" />
+        <Point X="5.375" Y="5.5" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.391" Y="3.935" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>BAAAIAAgAAAAAAAAAQAAAYgAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>BDD\SD_LogoutSteps.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="SD_Website" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="SauceDemoWebTestingSolution.BDD.SD_LoginSteps">
+    <Position X="0.5" Y="4" Width="3.5" />
+    <AssociationLine Name="SD_Website" Type="SauceDemoWebTestingSolution.SD_Website&lt;driverType&gt;" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="3.438" Y="6.901" />
+        <Point X="3.438" Y="7.151" />
+        <Point X="4.25" Y="7.151" />
+        <Point X="4.25" Y="6.188" />
+        <Point X="4.5" Y="6.188" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true" ManuallySized="true">
+        <Position X="0.102" Y="-1.327" Height="0.182" Width="1.129" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AABAAAAAAAAAIAAAAQEIAQgBAAAAAAAEAAAAAAAAAAQ=</HashCode>
+      <FileName>BDD\SD_LoginSteps.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="SD_Website" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="SauceDemoWebTestingSolution.SD_Login_Page">
+    <Position X="6.25" Y="0.75" Width="1.75" />
+    <Compartments>
+      <Compartment Name="Properties" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAQAAAAAAAAgCAAAAAAAAlAAAEAAAADAAAAIFAAAA=</HashCode>
+      <FileName>lib\pages\SD_Login_Page.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SauceDemoWebTestingSolution.SD_Products_Page" Collapsed="true">
+    <Position X="8.5" Y="6.25" Width="1.75" />
+    <Compartments>
+      <Compartment Name="Properties" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>EAACAIgAADAAAQAAAAwVgAiAIIAEUAxRCgCEAgAAAAE=</HashCode>
+      <FileName>lib\pages\SD_Products_Page.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
