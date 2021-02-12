@@ -123,7 +123,8 @@ The tests which were carried out are as follows:
 ## Sprint Review
 
 At the beginning of the sprint, the team planned out the project which included writing user stories to cover each feature and the Gherkin syntax for each scenario/test case.
-Throughout the project, the team split these user stories between themselves and gradually completed them. By the end of the project, all user stories had been completed with all of them meeting their definition of done.
+Throughout the project, the team split these user stories between themselves and gradually completed them. By the end of the project, all user stories bar one had been completed with all of them meeting their definition of done.
+The only incomplete user story was the checkout-overview page. This is the user story for confirming the user can view product information before completing check out.
 
 One possible area for improvement would be to produce tests for the state of the basket after logging out. It should be verified that the state is saved for individual users.
 
