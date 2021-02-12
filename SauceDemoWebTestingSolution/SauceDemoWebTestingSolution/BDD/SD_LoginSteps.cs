@@ -3,13 +3,14 @@ using TechTalk.SpecFlow;
 using System.Threading;
 using TechTalk.SpecFlow.Assist;
 using OpenQA.Selenium;
+using OpenQA.Selenium.Chrome;
 
 namespace SauceDemoWebTestingSolution.BDD
 {
     [Binding]
     public class SD_LoginSteps
     {
-        public SD_Website SD_Website { get; } = new SD_Website("chrome");
+        public SD_Website<ChromeDriver> SD_Website { get; } = new SD_Website<ChromeDriver>();
         private LoginCredentials _loginCredentials;
 
         [Given(@"I am on the login page")]

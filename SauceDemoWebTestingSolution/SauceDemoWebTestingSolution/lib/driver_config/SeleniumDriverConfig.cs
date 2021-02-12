@@ -5,41 +5,29 @@ using System;
 
 namespace SauceDemoWebTestingSolution
 {
-	public class SeleniumDriverConfig
+	//Making a generic website which takes in a driver type (e.g. ChromeDriver) , the type passed must also inherit from IWebDriver and have a default constructor
+	public class SeleniumDriverConfig<driverType> where driverType : IWebDriver, new()
 	{
 		public IWebDriver Driver { get; set; }
 
-		public SeleniumDriverConfig(string driver, int pageLoadInSecs, int implicitWaitInSecs)
+		public SeleniumDriverConfig(int pageLoadInSecs, int implicitWaitInSecs)
 		{
-			DriverSetUp(driver, pageLoadInSecs, implicitWaitInSecs);
+			Driver = new driverType(); // make a default instance of the typeDriver (using the default constructor)
+			DriverSetUp(pageLoadInSecs, implicitWaitInSecs);
 		}
 
-		public void DriverSetUp(string driverName, int pageLoadInSecs, int implicitWaitInSecs)
+		public void DriverSetUp(int pageLoadInSecs, int implicitWaitInSecs)
 		{
-			if (driverName.ToLower() == "chrome")
-			{
-				SetChromeDriver();
-				SetDriverConfig(pageLoadInSecs, implicitWaitInSecs);
-			}
-			else
-			{
-				throw new Exception("Please use chrome");
-			}
-		}
-
-		public void SetChromeDriver()
-		{
-			Driver = new ChromeDriver();
+			SetDriverConfig(pageLoadInSecs, implicitWaitInSecs);
 		}
 
 		private void SetDriverConfig(int pageLoadInSecs, int implicitWaitInSecs)
 		{
 			// this is the time the driver will wait for the page to load
-			Driver.Manage().Timeouts().PageLoad =
-				TimeSpan.FromSeconds(pageLoadInSecs);
+			Driver.Manage().Timeouts().PageLoad = TimeSpan.FromSeconds(pageLoadInSecs);
 			// this is the time the driver waits for the element before the tests fails
-			Driver.Manage().Timeouts().ImplicitWait =
-				TimeSpan.FromSeconds(implicitWaitInSecs);
+			Driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(implicitWaitInSecs);
 		}
+
 	}
 }
