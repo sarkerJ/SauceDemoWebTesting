@@ -6,7 +6,8 @@ I want to be able to checkout the items in my basket
 
 @Checkout
 Scenario: Items in my basket - Checkout
-Given I am on the products page again
+Given I Login as a Standard User
+And I am on the products page
 And I have the following amount of items in my basket <number of items>
 When I go to My Basket page
 And I click Checkout
@@ -19,7 +20,8 @@ Examples:
 
 @Checkout
 Scenario: Items in my basket - Continue Shopping
-Given I am on the products page again
+Given I Login as a Standard User
+And I am on the products page
 And I have the following amount of items in my basket <number of items>
 When I go to My Basket page
 And I click continue shopping

@@ -16,12 +16,6 @@ namespace SauceDemoWebTestingSolution.BDD
             _shared_SD_Website = shared_SD_Website;
         }
 
-        [Given(@"I am on the products page again")]
-        public void GivenIAmOnTheProductsPageAgain()
-        {
-            _shared_SD_Website.SD_Website.SD_Products_Page.VisitProductsPage();
-        }
-
         [Given(@"I have the following amount of items in my basket (.*)")]
         public void GivenIHaveTheFollowingAmountOfItemsInMyBasket(int items)
         {
