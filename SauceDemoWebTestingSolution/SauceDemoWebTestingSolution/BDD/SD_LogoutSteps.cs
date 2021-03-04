@@ -38,7 +38,7 @@ namespace SauceDemoWebTestingSolution.BDD
         [Then(@"I land on the sign in page")]
         public void ThenILandOnTheSignInPage()
         {
-            Assert.That(_shared_SD_Website.SD_Website.SeleniumDriver.Url, Is.EqualTo("https://www.saucedemo.com/index.html"));
+            Assert.That(_shared_SD_Website.SD_Website.SeleniumDriver.Url, Is.EqualTo("https://www.saucedemo.com/"));
         }
 
         [AfterScenario]
