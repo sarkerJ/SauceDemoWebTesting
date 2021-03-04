@@ -6,7 +6,8 @@ So that I know all my buying options
 
 @Products
 Scenario: Social Media Links - Widgets
-Given I am on the products page
+Given I Login as a Standard User
+And I am on the products page
 When I click on the following social media widget <widget>
 Then I land on the given social media page <social media page>
 Examples: 
@@ -27,7 +28,8 @@ Examples:
 
 @Products
 Scenario: Drop down menu selection - Sort by Z to A
-Given I am on the products page
+Given I Login as a Standard User
+And I am on the products page
 When I select to sort by <option> from the dropdown menue
 Then The products sort alphabetically from Z to A
 Examples: 
@@ -36,7 +38,8 @@ Examples:
 
 @Products
 Scenario: Drop down menu selection - Sort by Price - Low to High
-Given I am on the products page
+Given I Login as a Standard User
+And I am on the products page
 When I select to sort by <option> from the dropdown menue
 Then The products sort by price from low to high
 Examples: 
@@ -45,7 +48,8 @@ Examples:
 
 @Products
 Scenario: Drop down menu selection - Sort by Price - High to Low
-Given I am on the products page
+Given I Login as a Standard User
+And I am on the products page
 When I select to sort by <option> from the dropdown menue
 Then The products sort by price from high to low
 Examples: 
@@ -54,7 +58,8 @@ Examples:
 
 @Product
 Scenario: Accessing product specific page
-Given I am on the products page
+Given I Login as a Standard User
+And I am on the products page
 When I click on a product name <id>
 Then I should see a page with information of that product <productPageName>
 Examples: 
@@ -66,7 +71,8 @@ Examples:
 
 @Product
 Scenario: Going back to product page
-Given I am on the products page
+Given I Login as a Standard User
+And I am on the products page
 When I click on a product name <id>
 And I click the back button
 Then I should land on the products page again <labelName>
@@ -76,7 +82,8 @@ Examples:
 
 @Basket
 Scenario: Adding product to cart
-Given I am on the products page
+Given I Login as a Standard User
+And I am on the products page
 When I add a product to cart <productindex>
 Then the cart count is 1
 And the button state <productindex> changes to <state>
@@ -88,7 +95,8 @@ Examples:
 
 @Basket
 Scenario: Delete product from cart
-Given I am on the products page
+Given I Login as a Standard User
+And I am on the products page
 When I add a product to cart <productindex>
 And I click the button again to remove the product <productindex>
 Then the cart count is 0

@@ -114,12 +114,15 @@ this.ScenarioInitialize(scenarioInfo);
             {
                 this.ScenarioStart();
 #line 9
-testRunner.Given("I am on the products page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+testRunner.Given("I Login as a Standard User", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 10
-testRunner.When(string.Format("I click on the following social media widget {0}", widget), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.And("I am on the products page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 11
+testRunner.When(string.Format("I click on the following social media widget {0}", widget), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 12
 testRunner.Then(string.Format("I land on the given social media page {0}", socialMediaPage), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
@@ -142,7 +145,7 @@ testRunner.Then(string.Format("I land on the given social media page {0}", socia
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             argumentsOfScenario.Add("option", option);
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Drop down menu selection - Sort by A to Z", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 19
+#line 20
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -162,16 +165,16 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 20
+#line 21
 testRunner.Given("I Login as a Standard User", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 21
+#line 22
 testRunner.And("I am on the products page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 22
+#line 23
 testRunner.When(string.Format("I select to sort by {0} from the dropdown menue", option), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 23
+#line 24
 testRunner.Then("The products sort alphabetically from A to Z", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
@@ -194,7 +197,7 @@ testRunner.Then("The products sort alphabetically from A to Z", ((string)(null))
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             argumentsOfScenario.Add("option", option);
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Drop down menu selection - Sort by Z to A", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 29
+#line 30
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -214,13 +217,16 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 30
-testRunner.Given("I am on the products page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line hidden
 #line 31
-testRunner.When(string.Format("I select to sort by {0} from the dropdown menue", option), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.Given("I Login as a Standard User", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 32
+testRunner.And("I am on the products page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 33
+testRunner.When(string.Format("I select to sort by {0} from the dropdown menue", option), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 34
 testRunner.Then("The products sort alphabetically from Z to A", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
@@ -243,7 +249,7 @@ testRunner.Then("The products sort alphabetically from Z to A", ((string)(null))
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             argumentsOfScenario.Add("option", option);
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Drop down menu selection - Sort by Price - Low to High", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 38
+#line 40
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -263,13 +269,16 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 39
-testRunner.Given("I am on the products page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 41
+testRunner.Given("I Login as a Standard User", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 40
+#line 42
+testRunner.And("I am on the products page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 43
 testRunner.When(string.Format("I select to sort by {0} from the dropdown menue", option), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 41
+#line 44
 testRunner.Then("The products sort by price from low to high", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
@@ -292,7 +301,7 @@ testRunner.Then("The products sort by price from low to high", ((string)(null)),
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             argumentsOfScenario.Add("option", option);
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Drop down menu selection - Sort by Price - High to Low", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 47
+#line 50
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -312,13 +321,16 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 48
-testRunner.Given("I am on the products page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 51
+testRunner.Given("I Login as a Standard User", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 49
+#line 52
+testRunner.And("I am on the products page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 53
 testRunner.When(string.Format("I select to sort by {0} from the dropdown menue", option), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 50
+#line 54
 testRunner.Then("The products sort by price from high to low", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
@@ -344,7 +356,7 @@ testRunner.Then("The products sort by price from high to low", ((string)(null)),
             argumentsOfScenario.Add("id", id);
             argumentsOfScenario.Add("productPageName", productPageName);
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Accessing product specific page", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 56
+#line 60
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -364,13 +376,16 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 57
-testRunner.Given("I am on the products page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 61
+testRunner.Given("I Login as a Standard User", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 58
+#line 62
+testRunner.And("I am on the products page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 63
 testRunner.When(string.Format("I click on a product name {0}", id), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 59
+#line 64
 testRunner.Then(string.Format("I should see a page with information of that product {0}", productPageName), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
@@ -394,7 +409,7 @@ testRunner.Then(string.Format("I should see a page with information of that prod
             argumentsOfScenario.Add("id", id);
             argumentsOfScenario.Add("labelName", labelName);
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Going back to product page", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 68
+#line 73
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -414,16 +429,19 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 69
-testRunner.Given("I am on the products page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 74
+testRunner.Given("I Login as a Standard User", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 70
+#line 75
+testRunner.And("I am on the products page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 76
 testRunner.When(string.Format("I click on a product name {0}", id), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 71
+#line 77
 testRunner.And("I click the back button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 72
+#line 78
 testRunner.Then(string.Format("I should land on the products page again {0}", labelName), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
@@ -447,7 +465,7 @@ testRunner.Then(string.Format("I should land on the products page again {0}", la
             argumentsOfScenario.Add("productindex", productindex);
             argumentsOfScenario.Add("state", state);
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Adding product to cart", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 78
+#line 84
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -467,16 +485,19 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 79
-testRunner.Given("I am on the products page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 85
+testRunner.Given("I Login as a Standard User", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 80
+#line 86
+testRunner.And("I am on the products page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 87
 testRunner.When(string.Format("I add a product to cart {0}", productindex), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 81
+#line 88
 testRunner.Then("the cart count is 1", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-#line 82
+#line 89
 testRunner.And(string.Format("the button state {0} changes to {1}", productindex, state), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             }
@@ -500,7 +521,7 @@ testRunner.And(string.Format("the button state {0} changes to {1}", productindex
             argumentsOfScenario.Add("productindex", productindex);
             argumentsOfScenario.Add("state", state);
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Delete product from cart", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 90
+#line 97
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -520,19 +541,22 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 91
-testRunner.Given("I am on the products page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 98
+testRunner.Given("I Login as a Standard User", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 92
+#line 99
+testRunner.And("I am on the products page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 100
 testRunner.When(string.Format("I add a product to cart {0}", productindex), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 93
+#line 101
 testRunner.And(string.Format("I click the button again to remove the product {0}", productindex), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 94
+#line 102
 testRunner.Then("the cart count is 0", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-#line 95
+#line 103
 testRunner.And(string.Format("the button state {0} changes to {1}", productindex, state), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             }

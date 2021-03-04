@@ -130,12 +130,12 @@ namespace SauceDemoWebTestingSolution
             Assert.That(_shared_SD_Website.SD_Website.SD_Products_Page.GetPageLabel(), Does.Contain(name));
         }
 
-        [AfterScenario]
-        public void DisposableWebDriver()
-        {
-            _shared_SD_Website.SD_Website.SeleniumDriver.Quit();
-            _shared_SD_Website.SD_Website.SeleniumDriver.Dispose();
-        }
+        //[AfterScenario]
+        //public void DisposableWebDriver()
+        //{
+        //    _shared_SD_Website.SD_Website.SeleniumDriver.Quit();
+        //    _shared_SD_Website.SD_Website.SeleniumDriver.Dispose();
+        //}
 
 
     }

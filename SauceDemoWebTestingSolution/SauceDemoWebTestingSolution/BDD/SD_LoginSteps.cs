@@ -73,12 +73,12 @@ namespace SauceDemoWebTestingSolution.BDD
             Assert.That(_shared_SD_Website.SD_Website.SD_Login_Page.GetErrorMessageText(), Does.Contain(error));
         }
 
-        [AfterScenario]
-        public void DisposableWebDriver()
-        {
-            _shared_SD_Website.SD_Website.SeleniumDriver.Quit();
-            _shared_SD_Website.SD_Website.SeleniumDriver.Dispose();
-        }
+        //[AfterScenario]
+        //public void DisposableWebDriver()
+        //{
+        //    _shared_SD_Website.SD_Website.SeleniumDriver.Quit();
+        //    _shared_SD_Website.SD_Website.SeleniumDriver.Dispose();
+        //}
     }
 }
 
