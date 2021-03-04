@@ -17,7 +17,8 @@ Examples:
 
 @Products
 Scenario: Drop down menu selection - Sort by A to Z
-Given I am on the products page
+Given I Login as a Standard User
+And I am on the products page
 When I select to sort by <option> from the dropdown menue
 Then The products sort alphabetically from A to Z
 Examples: 

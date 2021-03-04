@@ -11,10 +11,20 @@ namespace SauceDemoWebTestingSolution
     {
         //public _shared_SD_Website.SD_Website<ChromeDriver> _shared_SD_Website.SD_Website { get; } = new _shared_SD_Website.SD_Website<ChromeDriver>();
         private Shared_SD_Website _shared_SD_Website;
+        private LoginCredentials _loginCredentials;
 
         public SD_ProductsSteps(Shared_SD_Website shared_SD_Website)
         {
             _shared_SD_Website = shared_SD_Website;
+        }
+
+        [Given(@"I Login as a Standard User")]
+        public void GivenILoginAsAStandardUser()
+        {
+            _shared_SD_Website.SD_Website.SD_Login_Page.VisitLoginPage();
+            _loginCredentials = new LoginCredentials();
+            _shared_SD_Website.SD_Website.SD_Login_Page.EnterCredentials(_loginCredentials);
+            _shared_SD_Website.SD_Website.SD_Login_Page.ClickLogin();
         }
 
         [Given(@"I am on the products page")]
