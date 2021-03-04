@@ -41,11 +41,11 @@ namespace SauceDemoWebTestingSolution.BDD
             Assert.That(_shared_SD_Website.SD_Website.SeleniumDriver.Url, Is.EqualTo("https://www.saucedemo.com/index.html"));
         }
 
-        //[AfterScenario]
-        //public void DisposableWebDriver()
-        //{
-        //    _shared_SD_Website.SD_Website.SeleniumDriver.Quit();
-        //    _shared_SD_Website.SD_Website.SeleniumDriver.Dispose();
-        //}
+        [AfterScenario]
+        public void DisposableWebDriver()
+        {
+            _shared_SD_Website.SD_Website.SeleniumDriver.Quit();
+            _shared_SD_Website.SD_Website.SeleniumDriver.Dispose();
+        }
     }
 }
